@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  conversion-attribution:
+    build: .
+    container_name: conversion_attribution_app
+    ports:
+      - "4040:4040"  # Expose Spark UI if needed
+    volumes:
+      - .:/workspace
+    command: python3 main.py
